@@ -32,7 +32,7 @@ export const updateBook = async({id, ...date}) =>{
     if(!response.ok){
         return("Ошибка в: ", response.message)
     }
-    return response /* остановка здесь время видео 49: 01 написала updateBook надо подключить   */
+    return response 
 
 }
 

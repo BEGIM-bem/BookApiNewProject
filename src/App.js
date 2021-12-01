@@ -1,5 +1,5 @@
 import React from 'react';
-import {Routes, Route, Router }  from 'react-router-dom' /*Routes -это место Swich разработчики так поменяли */
+import {Routes, Route, Router }  from 'react-router-dom' 
 import BooksList from './BooksList/BooksList'
 import CreateBook from './CreateBook/CreateBook.jsx'
 import UpdateBook from './UpdateBook/UpdateBook.jsx';

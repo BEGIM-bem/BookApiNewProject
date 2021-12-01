@@ -42,7 +42,7 @@ const getAllBooks = async () => {
      if(isError){
          return <span>Error: {error.message} </span>
      }
-   /* Здесь остановилась виедо 24: 50 минут продолжить смотреть  */ 
+   
 
     return ( 
         <Container> 
