@@ -1,9 +1,14 @@
-import {useParams, useHistory} from 'react-router-dom'
+import React from 'react'
+// import {useHistory, useParams} from "react-router-dom"
+
+import { useNavigate, useParams } from "react-router-dom";
+
 import { useMutation, useQuery } from 'react-query'
 
 import {Box, Heading, Flex}  from 'rebass/styled-components'
 
-import {BookForm, Container} from '../shared'
+import BookForm from '../shared/BookForm'
+import Container from '../shared/Container'
 
 import {getBook, updateBook} from '../api'
 import Loader from 'react-loader-spinner'
@@ -11,7 +16,7 @@ import Loader from 'react-loader-spinner'
 
 function UpdateBook() {
     const {id} = useParams()
-    const history = useHistory()
+    const history = useNavigate()
     const {data, error, isLoading , isError} = useQuery(['book', {id}], getBook)
 
     const {mutateAsync, isLoading: isMutating } = useMutation(updateBook ) 

@@ -1,7 +1,7 @@
 import React from 'react'
 import {useQuery } from 'react-query' 
 // import {getAllBooks} from '../api'
-import {Container} from '../shared/Conteiner'
+import Container from '../shared/Container'
 import {Flex} from 'rebass/styled-components'
 import Loader from 'react-loader-spinner'
 import axios from 'axios'
@@ -25,7 +25,7 @@ const getAllBooks = async () => {
  function BooksList(){
    
 
-     const {isSuccess, data,  error, isLoading, isError} = useQuery('books', getAllBooks)
+     const { data,  error, isLoading, isError} = useQuery('books', getAllBooks)
      console.log("Data22: ",  data)
 
 

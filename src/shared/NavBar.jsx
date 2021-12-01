@@ -2,7 +2,7 @@ import React from 'react'
 import {Flex, Box, Link as StyledLink, Image} from 'rebass/styled-components'
 
 import{Link} from 'react-router-dom'
-import {Container} from './Conteiner'
+import Container from './Container'
 
 function NavBar(){
 
