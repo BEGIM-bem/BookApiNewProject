@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react';
+import {Routes, Route, Router }  from 'react-router-dom' /*Routes -это место Swich разработчики так поменяли */
+import BooksList from './BooksList/BooksList'
+import CreateBook from './CreateBook/CreateBook.jsx'
+import UpdateBook from './UpdateBook/UpdateBook.jsx';
+import NavBar from './shared/NavBar'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+ 
+<>
+    <NavBar />
+ 
+    <Routes>
+        <Route path ='/update-book/:id' element ={<UpdateBook />} />
+           
+
+      <Route path ='/create-book' element = {<CreateBook />} />
+       
+        
+
+      <Route path = '/' element ={<BooksList />} />
+
+    </Routes>
+    </>
+  
   );
 }
 
